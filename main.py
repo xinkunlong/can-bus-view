@@ -8,9 +8,13 @@ import can
 from datetime import datetime
 import queue
 import logging, logging.config
-from os import path
 
+import os
+from os import path
 default_log_config_file = path.join(path.dirname(path.abspath(__file__)), 'logging.conf')
+
+if not path.exists('./LogFile'):
+    os.makedirs('./LogFile')
 
 LOGGING_NAME = "MAINWINDOWS"
 
